@@ -20,8 +20,8 @@ const weeks = [
       url: "week5/index.html"
     },  
     {
-      label: "Week 6 To Do",
-      url: "week06/todo.html"
+      label: "Week 6 notes",
+      url: "week06/index.html"
     },
     {
       label: "Week 7 notes",
@@ -46,14 +46,14 @@ const weeks = [
     
   ]
   
-  let olist = document.getElementById("list");
+  let list = document.getElementById("list");
   
   for (let i=0; i < weeks.length; i++){
-    let a = document.createElement("a");
+    let anchor = document.createElement("a");
     let li = document.createElement("li");
-    a.textContent = weeks[i].label;
-    a.setAttribute('href', weeks[i].url);
-    li.appendChild(a);
-    olist.appendChild(li); 
+    anchor.textContent = weeks[i].label;
+    anchor.setAttribute('href', weeks[i].url);
+    li.appendChild(anchor);
+    list.appendChild(li); 
   }
 document.getElementById("year").innerHTML = new Date().getFullYear()

@@ -5,25 +5,28 @@
 body {
     font-size: 18px;
     line-height: 1.5;
-    font-family: 'Oswald', sans-serif;
 }
-
+.body {
+    background-color: #fafafa;
+    padding: 20px;
+    text-align: center;
+}
 header, nav, main, footer {
     margin: 1.25rem auto;
-    max-width: 800px;
+    max-width: 50rem;
 }
 
 header, footer {
     position: relative;
     background-color: var(--primary);
     padding: .5rem;
-    border-radius: 15px;
+    border-radius: 0.938px;
     color: #fff;
     text-align: center;
 }
   
 header img {
-    width: 200px;
+    width: 12.5rem;
     border: 2px solid; 
     border-radius: 5px;
 }
@@ -33,15 +36,13 @@ h1, h2, h3 {
     text-decoration: underline;
 }
 
-nav {
-    color: rgb(85, 117, 113);
+nav, a {
+    color: rgb(149, 153, 111);
+    font-size: large;
 }
-
-a {
-    color: inherit;
+footer{
+    padding: 2rem;
 }
-
-
 
 @media only screen and (min-width: 32.5em) {
     header img {
