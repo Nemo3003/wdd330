@@ -1,10 +1,13 @@
 "use strict";
+
+//Different ways to declare a variable
 let a = 10;
 console.log(a);
 let $dollars = 10;
 let _hollycow = 10;
 let $ = 10;
 //---------------------------------------------
+//using Map
 const Numerals = new Map();
 Numerals.set(1, 'I');
 Numerals.set(2, 'II');
@@ -15,6 +18,7 @@ Numerals.has(10);
 let newNumerals = [...Numerals];
 console.log(newNumerals);
 //----------------------------------------------
+//Spread operator
 function mean(...values) {
     let total = 0;
     for(const value of values) {
@@ -24,8 +28,9 @@ function mean(...values) {
     }
 console.log(mean(2,3,4,5,6,7))
 //---------------------------------------------
+//Callbacks
 let bro = "How you remind me"
-function Ending(func){
+function Ending(){
     console.log(`of who I really am`);
 }
 const Sing = (song,callback) => {
@@ -35,6 +40,7 @@ const Sing = (song,callback) => {
 Sing(bro, Ending);
 //-------------------------------------
 //Eloquent JavaScript
+//Variable holding various variables
 let one = 1, two = 2, three = 3;
 console.log(one+two+three);
 //---------------------------------------
@@ -142,4 +148,53 @@ function countChar(string, char){
 }//end of countChar
 console.log(countBs("BBC"));
 console.log(countChar("kakkerlak", "k"));
+//---------------------------------------
+/**
+ * 
+ * Write a range function that takes two arguments, start and end, and
+returns an array containing all the numbers from start up to (and
+including) end
+ */
+function range(start, end){
+    let array = [];
+    for(let i = start; i <= end; i++){
+        array.push(i);
+    }
+    return array;
+}
+console.log(range(1,10));
+//---------------------------------------
+/**Next, write a sum function that takes an array of numbers and returns
+the sum of these numbers. Run the example program and see whether
+it does indeed return 55 */
+function sum(array){
+    let total = 0;
+    for(let i = 0; i < array.length; i++){
+        total += array[i];
+    }
+    return total;
+}   
+console.log(sum([1,2,3,4,5]));
+//---------------------------------------
+/**modify your range function to take an optional
+third argument that indicates the “step” value used when build-
+ing the array. If no step is given, the elements go up by increments
+of one, corresponding to the old behavior. The function call range(1,
+10, 2) should return [1, 3, 5, 7, 9]. Make sure it also works with
+negative step values so that range(5, 2, -1) produces [5, 4, 3, 2]. */
+function range(start, end, step = 1){
+    let array = [];
+    if(step > 0){
+        for(let i = start; i <= end; i += step){
+            array.push(i);
+        }
+    }
+    else{
+        for(let i = start; i >= end; i += step){
+            array.push(i);
+        }
+    }
+    return array;
+}
+console.log(range(1,10,2));
 //---------------------------------------

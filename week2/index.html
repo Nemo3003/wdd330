@@ -63,7 +63,181 @@
     </p>
     <h2>Chapter 4: Data Structures: objects and arrays</h2>
     <p>
-        
+        All the information in this chapter was already covered in the other book. Therefore I just used it as another review. <br>
+    </p>
+    <p>All practices are available to you in my repository or in the console :)</p>
+    <p>
+        But here is my JS code :)
+    </p>
+    <h2>PRACTICE.JS</h2>
+    <p>
+        "use strict";<br>
+
+//Different ways to declare a variable<br>
+let a = 10;<br>
+console.log(a);<br>
+let $dollars = 10;<br>
+let _hollycow = 10;<br>
+let $ = 10;<br>
+//--------------------------------------------- <br>
+//using Map<br>
+const Numerals = new Map();<br>
+Numerals.set(1, 'I');<br>
+Numerals.set(2, 'II');<br>
+Numerals.set(3, 'III');<br>
+Numerals.get(3);<br>
+Numerals.has(10);<br>
+
+let newNumerals = [...Numerals];<br>
+console.log(newNumerals);<br>
+//----------------------------------------------<br>
+//Spread operator<br>
+function mean(...values) {<br>
+    let total = 0;<br>
+    for(const value of values) {<br>
+    total += value;<br>
+    }<br>
+    return total/values.length;<br>
+    }<br>
+console.log(mean(2,3,4,5,6,7))<br>
+//---------------------------------------------<br>
+//Callbacks<br>
+let bro = "How you remind me"<br>
+function Ending(){<br>
+    console.log(`of who I really am`);<br>
+}<br>
+const Sing = (song,callback) => {<br>
+    console.log(`I'm singing along to ${song}.`);<br>
+    callback();<br>
+    }<br>
+Sing(bro, Ending);<br>
+//-------------------------------------<br><br>
+//Eloquent JavaScript<br>
+//Variable holding various variables<br>
+let one = 1, two = 2, three = 3;<br>
+console.log(one+two+three);<br>
+//---------------------------------------<br><br>
+//practice for loop<br>
+let cod = "#";<br>
+for(let i = 0; i < 7; i++){<br>
+    console.log(cod);<br>
+    cod += "#";<br>
+}
+//---------------------------------------<br>
+
+for(let i = 1; i <= 100; i++){<br>
+    if(i % 3 === 0 && i % 5 === 0){<br>
+        console.log("FizzBuzz");<br>
+    }<br>
+    else if(i % 3 === 0){<br>
+        console.log("Fizz");<br>
+    }<br>
+    else if(i % 5 === 0){<br>
+        console.log("Buzz");<br>
+    }<br>
+    else{<br>
+        console.log(i);<br>
+    }<br>
+}
+//---------------------------------------<br>
+
+let board = "";<br>
+for(let i = 0; i < 8; i++){<br>
+    if(i % 2 === 0){<br>
+        board += " # # # # #";<br>
+    }<br>
+    else{<br>
+        board += ' ' +" # # # #";<br>
+    }<br>
+    board += "\n";<br>
+    console.log(board);<br>
+}
+//---------------------------------------<br><br>
+
+const min=(a,b)=>{<br>
+    if(a < b){<br>
+        return a;}<br>
+    else{<br>
+        return b;}<br>
+}<br>
+console.log(min(2,3));<br>
+//---------------------------------------<br><br>
+
+function isEven(n){<br>
+    if(n === 0){<br>
+        return true;<br>
+    }<br>
+    else if(n === 1){<br>
+        return false;<br>
+    }<br>
+    else if(n < 0){<br>
+        return isEven(-n);<br>
+    }<br>
+    else{<br>
+        return isEven(n-2);<br>
+    }<br>
+}<br>
+console.log(isEven(50));<br>
+//---------------------------------------<br><br>
+
+function countBs(string){<br>
+    let count = 0;<br>
+    for(let i = 0; i < string.length; i++){<br>
+        if(string[i] === "B"){<br>
+            count++;<br>
+        }<br>
+    }<br>
+    return count;<br>
+}//end of countBs<br>
+function countChar(string, char){<br>
+    let count = 0;<br>
+    for(let i = 0; i < string.length; i++){<br>
+        if(string[i] === char){<br>
+            count++;<br>
+        }<br>
+    }<br>
+    return count;<br>
+}//end of countChar<br>
+console.log(countBs("BBC"));<br>
+console.log(countChar("kakkerlak", "k"));<br>
+//---------------------------------------<br><br>
+
+function range(start, end){<br>
+    let array = [];<br>
+    for(let i = start; i <= end; i++){<br>
+        array.push(i);<br>
+    }<br>
+    return array;<br>
+}<br>
+console.log(range(1,10));<br>
+//---------------------------------------<br><br>
+
+function sum(array){<br>
+    let total = 0;<br>
+    for(let i = 0; i < array.length; i++){<br>
+        total += array[i];<br>
+    }<br>
+    return total;<br>
+}   <br>
+console.log(sum([1,2,3,4,5]));<br>
+//---------------------------------------<br><br>
+
+function range(start, end, step = 1){<br>
+    let array = [];<br>
+    if(step > 0){<br>
+        for(let i = start; i <= end; i += step){<br>
+            array.push(i);<br>
+        }<br>
+    }<br>
+    else{<br>
+        for(let i = start; i >= end; i += step){<br>
+            array.push(i);<br>
+        }<br>
+    }<br>
+    return array;<br>
+}<br>
+console.log(range(1,10,2));<br>
+//---------------------------------------<br><br>
     </p>
 </body>
  <script src="practice.js"></script>
