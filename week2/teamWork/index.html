@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--Add a text input and a button. Put an empty div with an ID below those-->
+    <input type="text" id="input">
+    <button id="button">Click me</button>
+    <div id="output"></div>
+    <!--Add a number input and a button. Put an empty div with an ID below those-->
+    <input type="number" id="number">
+    <button id="numberButton">Click me</button>
+    <div id="numberOutput"></div>
+    <!--Add an additional input to your HTML file.
+Add a + button.-->
+    <input type="text" id="addInput">
+    <button id="addButton">Click me</button>
+    <div id="addOutput"></div>
+
+    <!--Add a script tag, write a function that will read the contents of the input, and write them to the div.-->
+    <script >
+        function readInput(){
+            var input = document.getElementById("input").value;
+            document.getElementById("output").innerHTML = input;
+        }
+        document.getElementById("button").addEventListener("click", readInput);
+    /*
+    Write a new function that expects a number as an argument.
+     It should take that number and sum all the numbers up to the number provided.
+      (ie n=5…so it would do 1+2+3+4+5 = 15) It should return that value.
+    */
+   /*When the button is pressed it should read the number from the input. Make sure it is a valid number, call the summing function you just wrote, and output the result to the div.*/
+    function readNumber(){
+        var number = document.getElementById("number").value;
+        document.getElementById("numberOutput").innerHTML = sum(number);
+    }
+    document.getElementById("numberButton").addEventListener("click", readNumber);
+    function sum(number){
+        var sum = 0;
+        for(var i = 1; i <= number; i++){
+            sum += i;
+        }
+        return sum;
+    }
+    /*
+    Write a function that will take the numbers from each input, add them together, and output the result to a div
+    */
+    function add(){
+        var addInput = document.getElementById("addInput").value;
+        document.getElementById("addOutput").innerHTML = sum(addInput);
+    }
+    document.getElementById("addButton").addEventListener("click", add);
+    </script>
+</body>
+</html>
