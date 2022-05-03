@@ -1,6 +1,9 @@
 :root {
     --primary: #9e9d51;
 }
+html{
+    background-color: #9e9d51;
+}
 
 body {
     font-size: 18px;
@@ -10,6 +13,10 @@ body {
     background-color: #fafafa;
     padding: 20px;
     text-align: center;
+    margin: 3rem;
+    font-size: x-large;
+    border-radius: 2rem;
+    box-shadow: -2px 1px 5px 2px rgba(0,0,0,0.66);
 }
 header, nav, main, footer {
     margin: 1.25rem auto;
@@ -39,6 +46,9 @@ h1, h2, h3 {
 nav, a {
     color: rgb(149, 153, 111);
     font-size: large;
+}
+p{
+    
 }
 footer{
     padding: 2rem;
