@@ -36,7 +36,25 @@
     <p>document.body.addEventListener('click',doSomething);</p><br>
     <p>I still wonder, does anyone still uses internet explorer? </p><br>
     <p>I feel like it is important to understand the concept of a callback, since callbacks are quite used in these cases</p><br>
-    <p>--------------------I LEFT AT TYPES OF EVENT---------------------------------------</p>
+    <p>The event type "target", what is it used for? I mean, is it useful at all?</p><br>
+    <p>I learned about screenX and screenY but I have never seen them in use...</p><br>
+    <p>They are useful to find out where in the screen the click or the event ocurred...</p>
+    <p>Mouse events are by far one of the most used and also in my opinion, the most useful of all events</p><br>
+    <p>const mouseParagraph = document.querySelector(.mousing);</p><br>
+    <p>mouseParagraph.addEventListener('click', highlight);</p><br>
+    <p>Keyboard events are quite useful as well, this adds a lot of interactivity to your page</p><br>
+    <p>mouseParagraph.addEventListener('keydown', highlight);</p><br>
+    <p>I did not know the existence of the keycode.js library</p><br>
+    <p>I did not know that touch events were a thing! I loved this! I always thought that event listeners were only for mouses and keyboards</p><br>
+    <p>An example of the touch event is touchend, which fires when the user stops touching the screen.</p><br>
+    <p>Example: mouseParagraph.addEventListener('touchend', ()=> console.log('Touch stopped'));</p><br>
+    <p>touchmove, touchenter, touchleave, touchcancel. I believe that most of them are self-explanatory</p><br>
+    <p>touchmove occurs when the user touches the screen and moves it without leaving. touchenter occurs when the user is touching the screen and passes over an element that had a touch event <br> touchleave occurs when the user is still touching the screen but leaves the specific event that was triggered <br> touchcancel occurs when a touch is interrupted, like too many fingers touching the screen </p><br>
+    <p>Swip events do not exist as "swipstart" for example, instead they are created convining touchstart, touchmove, and touchleave. <br>There are two libraries that made it possible to implement gestures, such are: hammer.js and zingtouch. </p> <br>
+    <p>Just like mouse events, touch events have properties, such as sreenX or screenY. But the one that looks nice to me is the .force wich returns the amount of pressure applied on the screen <br> and the .identifier returns the an unique ID <br> Even if these events are cool to use, most of them are just experimental and are not widely implemented</p> <br>
+    <p>We have the addEventListener, but we also have the removeEventListener, what is it used for? it is useful to remove an event listener</p> <br>
+    <p>The preventDefault helps us to prevent default behaviors of certain elements <br> an example would be if we do not want a link to redirect to another page but to display a message in the console<br> so, for example you could use: <br> const Linken = document.getElementById(mine); <br> Linken.addEventListener('click', (event)=>{event.preventDefault(); <br>console.log('This link is broken')<br>}); </p> <br>
+    <p>I AM STILL IN EVENT PROPAGATION</p>
     <footer>
         <p>&copy; 2020 - WDD330 - Week 03 - Ulises Mariano Melgarejo</p>
         
