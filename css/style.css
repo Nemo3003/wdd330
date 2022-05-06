@@ -1,14 +1,13 @@
 :root {
     --primary: #9e9d51;
 }
-html{
-    background-color: #9e9d51;
-}
+
 
 body {
     font-size: 18px;
     line-height: 1.5;
-    background-color: #fff;
+    
+    
 }
 .body {
     background-color: #fafafa;
@@ -50,6 +49,9 @@ nav, a {
 }
 p{
     
+}
+.list-week{
+    border: 2px solid #333;
 }
 footer{
     padding: 2rem;
