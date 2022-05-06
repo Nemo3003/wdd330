@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="style.css">
     <title>Week 03 - WDD330</title>
 </head>
 <body class="body">
@@ -54,7 +55,79 @@
     <p>Just like mouse events, touch events have properties, such as sreenX or screenY. But the one that looks nice to me is the .force wich returns the amount of pressure applied on the screen <br> and the .identifier returns the an unique ID <br> Even if these events are cool to use, most of them are just experimental and are not widely implemented</p> <br>
     <p>We have the addEventListener, but we also have the removeEventListener, what is it used for? it is useful to remove an event listener</p> <br>
     <p>The preventDefault helps us to prevent default behaviors of certain elements <br> an example would be if we do not want a link to redirect to another page but to display a message in the console<br> so, for example you could use: <br> const Linken = document.getElementById(mine); <br> Linken.addEventListener('click', (event)=>{event.preventDefault(); <br>console.log('This link is broken')<br>}); </p> <br>
-    <p>I AM STILL IN EVENT PROPAGATION.</p>
+    <p>So the event propagation seems to refer only to the fact that whenever you click on a li tag, you are also clicking on a ul and div...</p><br>
+    <p>There are two ways an event propagation could be fired, bubbling or capturing. Bubbling is when on the element that was clicked first and then the event "goes up" like bubbles firing the rest of the elements <br>
+    You also have the capturing which starts from top to bottom, I guess... capturing the elements... <br>
+    ulElement = document.getElementById('list'); <br>
+    liElement = document.querySelector('#list li'); <br>
+    ulElement.addEventListener('click', (event) => <br>
+    console.log('Clicked on ul') ); <br>
+    liElement.addEventListener('click', (event) => <br>
+    console.log('Clicked on li') );</p> <br>
+    <p>This was a bubbling (according to the book) and a capturing would be <br> 
+        ulElement.addEventListener('click', (event) => <br>
+        console.log('Clicked on ul'),true); <br>
+        liElement.addEventListener('click', (event) => <br>
+        console.log('Clicked on li'),true);</p> <br>
+        <p>I honestly do not see the importance of propagation...</p><br>
+        <p>Event delegation is when you use an event listener and attach it to the parent element, so in this way if a child element is triggered, then the event listener will do so as well <br>
+        So, if we want to make any of the following be highlighted when clicked on, we do the following: <br>
+        <u l i d='list'> <br>
+            <li>one</li> <br>
+            <li>two</li> <br>
+            <li>three</li> <br>
+            </u l> <br>
+            And our JS code would be: <br>
+            ulElement.addEventListener('click',highlight); <br>
+            This means that if any of the child elements are clicked, that list will be highlighted</p><br>
+        </p>
+        <p>Book activity: Ninja Quiz</p>
+        <a href="https://codepen.io/nemo3003/pen/jOYoMZR">Ninja Quiz From Book</a>
+        <h3>My Code in the app.js</h3>
+        <p>
+            const superman = {<br>
+                name: 'Superman',<br>
+                'real name': 'Clark Kent',<br>
+                height: 75,<br>
+                weight: 235,<br>
+                hero: true,<br>
+                villain: false,<br>
+                allies: ['Batman','Supergirl','Superboy'],<br>
+                fly() {<br>
+                return 'Up, up and away!';<br>
+                }<br>
+                };<br>
+                console.log(superman.name, superman.allies[0], superman.fly());<br>
+                superman.name = 'Ulises Martinez';<br>
+                console.log(superman.name);<br>
+                //--------------------------------------------<br>
+                //declaring an object<br>
+                const name = 'ulises';<br>
+                const RealName = 'Ulises';<br>
+                const person = {name, RealName};<br>
+                console.log(person.name, person.RealName);<br>
+                
+                //--------------------------------------------<br>
+                const hulk = { name: 'Hulk', ['catch' + 'Phrase']: 'Hulk Smash!' };<br>
+                console.log(hulk.catchPhrase);<br>
+                //--------------------------------------------<br>
+                function greet({greeting='Hello',name,age=18}) {<br>
+                    return `${greeting}! My name is ${name} and I am ${age} years old.`;<br>
+                    }<br>
+                console.log(greet({name:'Ulises',age:22}));<br>
+                //--------------------------------------------<br>
+                //This object<br>
+                const cats = {<br>
+                    amount: 6,<br>
+                    countThem(){<br>
+                        return Math.ceil(this.amount * Math.random());<br>
+                    }<br>
+                }<br>
+                console.log(cats.countThem());<br>
+                //--------------------------------------------<br>
+                
+
+        </p>
     <footer>
         <p>&copy; 2020 - WDD330 - Week 03 - Ulises Mariano Melgarejo</p>
         
