@@ -19,7 +19,24 @@
     <p>Submitting a Form: the most used event here is the submit event, this sends the form to the server for its processing</p><br>
     <p>Form controllers: I already knew about them and it is all just a review to me</p><br>
     <p>This is more HTML than JavaScript so I could say that I already know about this subject</p><br>
-    
+    <h2>Chapter 12: OOP</h2> <br>
+    <p>I have been learning about OOP in Python, Java, and C#, so to be honest, this chapter is just a review to me. So I do not have anything to say about this chapter.</p><br>
+    <h2>Chaper 15: Modern JavaScript</h2>
+    <p>So, a module is basically a self-containing piece of code that provides functions and methods. Quite similar to an API to be honest <b>This way you can have your code in a more organized way. Breaking down the code into smaller pieces <br> ensuring you will have a highly organized project. You can <br> store those functions or methods inside different folders as well. <br>
+    It is considered good design to keep code as loosely coupled as possible</p><br> <p>Take into consideration the following:</p>
+    <p>All code in modules is always in strict mode without the need to use <br>
+    "use strict" and there is no way to opt out of this. <br> A modules has its own global scope. <br>The value of this in the top level of a module is undefined, rather than the global object. <br>You can't use HTML-style comments in modules. <br>
+    <p>example here of how to import modules:<br>
+        first function is created in a file<br>
+        export const PI = 3.1415926;<br><br>
+        then in the file you want to use the above mod. you do this:<br>
+        import { PI } from './pi.js';<br><br>
+
+    You could even create a library of functions to import into another code<br><br>
+
+    Having more than one default export will result in a syntax error.<br> So as an alternative we could use named exports.<br>Also, if you need to import multiple functions <br> you could use the * symbol: import * as stats from './stats.js';
+    </p>
+    </p>
     <script src="app.js"></script>
 </body>
 </html>
