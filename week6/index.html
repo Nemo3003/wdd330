@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Challenge one: Todo list for week 06">
+  <link rel="stylesheet" type="text/css" href="css/base.css">
+  <title>To do - Week 06:</title>
+</head>
+
+<body>
+
+    <h1>To Do - Week 06:</h1>
+    <ul class="todoItems"></ul>
+    <div id="counter"></div>
+    <form class="todoForm">
+        <input type="text" class="todoInput" placeholder="Add a task">
+        <button type="submit" class="add-button">+</button>
+    </form>
+
+    <button onclick="updateCount(todosList)">All</button>
+    <button onclick="active(todosList)">Active</button>
+    <button onclick="completed(todosList)">Completed</button>
+
+    <script src="js/app.js"></script>
+</body>
+<footer>
+    &copy; <span id="year"></span> .:|:. Ulises M.Melgarejo .:|:. Argentina
+</footer>
+</html>

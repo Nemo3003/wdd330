@@ -1,0 +1,51 @@
+:root{
+    --lightGrey: #bababa;
+    --grey: #8d8d8d;
+    --lightBlue: #a6cbeb;
+    --blue: #1b5180;
+    --black: #3a3a3a;
+    --white: #ffffff;
+    --orange: #c04d2a;
+    --roboto: 'Roboto', sans-serif;}
+body{text-align: center; font-family: var(--roboto);}
+
+ul{ list-style-type: none;  }
+
+.checked { text-decoration: line-through;}
+
+.todoItems {
+  max-width: 25rem; margin:0 auto; text-align: left;} 
+.todoForm { margin: 2.5rem 0px;}
+.item {
+  background-color: var(--white);
+  padding: 0.625rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+  max-width: 21.875rem;}
+.todoInput { 
+  width: 15.625rem;
+  border-radius: 0.313rem;
+  padding: 0.625rem;
+  font-size: 1.1rem;}
+.add-button {
+  background-color: var(--lightBlue);
+  color: var((--white));
+  border: none;
+  outline: none;
+  border-radius: 0.313rem;
+  padding: 0.313rem;
+  font-size: 1.3rem;}
+.delete-button {
+  float: right;
+  background-color: var(--orange);
+  outline: none;
+  border-radius: 6px;
+  padding: 2px 5px;
+  margin-left: 0.625rem;
+  font-weight:600;
+}
+button{cursor:pointer;}
+footer{
+  max-width: 21.875rem;
+  margin:0 auto;
+  padding:1em;}
