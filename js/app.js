@@ -21,7 +21,7 @@ const weeks = [
     },  
     {
       label: "Week 6 ToDo List",
-      url: "week06/index.html"
+      url: "week6/index.html"
     },
     {
       label: "Week 7 notes",
