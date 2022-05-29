@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 06 - WDD330</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="body">
+    <h1>Week 06 - Further Functions</h1>
+    <h2>Call and Apply Methods</h2>
+    <p>I love the fact that "this" is back! It makes my code look...hum..."more professional" <br> or at least that is what I like to think <br> And this example given by the book makes it quite clear on how to use it <br>
+    </p>
+    <pre>
+        function sayHello(greeting="Hello"){
+            return `${greeting}, my name is ${this.name}`
+        }
+        sayHello.call(clark, 'How do you do');
+        'How do you do, my name is Clark'
+    </pre>
+    <p>So, if a function does not refer to an object as "this" in its body, it can still be called using the "call()" method, but you need to provide "null" as its first argument. This is interesting, I did not know about the call function. I like it!</p>
+    <pre>square.call(null, 4)</pre>
+    <script src="app.js"></script>
+</body>
+</html>
