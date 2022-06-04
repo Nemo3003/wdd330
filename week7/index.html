@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body class="body">
-    <h1>Week 06 - Further Functions</h1>
+    <h1>Week 07 - Further Functions</h1>
     <h2>Call and Apply Methods</h2>
     <p>I love the fact that "this" is back! It makes my code look...hum..."more professional" <br> or at least that is what I like to think <br> And this example given by the book makes it quite clear on how to use it <br>
     </p>
@@ -21,6 +21,76 @@
     </pre>
     <p>So, if a function does not refer to an object as "this" in its body, it can still be called using the "call()" method, but you need to provide "null" as its first argument. This is interesting, I did not know about the call function. I like it!</p>
     <pre>square.call(null, 4)</pre>
+   
+   <p> Note that in es6 assuming you are utilizing modules IIFE is less useful(not useless) on the grounds that the extension is now restricted to the module.<br>
+This doesn't imply that you may not at any point need to sepearte some code from the rest. One more helpful component of the IIFE is putting<br>
+impermanent factors in the covering utilizing a variable called temp so it just exists while the IFFE is being invoked<br>
+
+One more extraordinary utilization of IIFE is to front burden something like instatement. Like a welcome message that isn't required later.<br>
+
+Recursive capacities summon themselves until a condition has been met like if n==1 accomplish something different continue onward until n==1<br>
+
+We can use callbacks to guarantee that while trusting that something will get done or happen doesn't keep other code from running.<br><br>
+
+Functions can be utilized to simplify callback hell (convulted coding from such a large number of callbacks). Functions can either be settled or rejected<br>
+when the commitment has been settled we can utilize the then() strategy to continue. You could likewise utilize the .get() method<br>
+You can assemble .then, at that point, and .catch strategies together<br>
+
+promise.then('').catch('')<br>
+
+You can likewise chain promises where just a single function will start when the past has been settled.<br>
+
+functions can accept other functions as arguments, they can also return a function<br>
+
+Closures are where an 'inward' work is returned by the 'external' work giving it admittance to any factors paying little mind to extent of the functions<br>
+Terminations have forever been that "Unusual" part of Javascript to me<br>
+Using closures allows access to variables but also allows changing variables.<br>
+
+Generators can be utilized to define fucntions... * is set after the function declaration. function* name(). generators are utilized to keep up with the
+condition of a value.<br> You would then utilize a next method to return a value everytime it gets called<br>
+
+Yield watchword is not quite the same as return in light of the fact that the condition of the worth returned is recollected whenever yield is called. Circles are stopped after<br>
+each yield articulation, until the following strategy is called again<br>
+
+A critical part of functional programming is its utilization of unadulterated capacities. A pure<br>
+function is a function that complies with the accompanying rules:<br>
+ The returned value of an unadulterated function ought to just rely upon the values provided<br>
+as arguments. It doesn't depend on values from elsewhere in the program.<br>
+ There are no aftereffects. A pure function changes no qualities or data<br>
+somewhere else in the program. It just makes non-damaging information transformations<br>
+also, returns new values, as opposed to changing any of the basic data.<br>
+ Referential transparency. Given similar arguments, a pure function will<br>
+continuously return the equivalent result.<br>
+
+Generally, practical programming or pure functions is direct and unsurprising, simpler to test, decreased in bugs. Be that as it may, it is inflexible and simple to<br>
+defy the guidelines. In any case, you can utilize pure functions blended in with different paradigms. This permits you to perform tasks without significantly altering the condition of any information
+<br>
+
+Currying is when not all arguments are given to the function so it returns another function that has the arguments...<br>
+<pre>
+    
+// Noncurried version
+const add = (a, b, c)=>{
+    return a+ b + c
+}
+console.log(add(2, 3, 5)) // 10
+
+//Curried version
+const addCurry =(a) => {
+    return (b)=>{
+        return (c)=>{
+            return a+b+c
+        }
+    }
+}
+console.log(addCurry(2)(3)(5)) // 10
+</pre>
+
+It is important to try and keep your functions as pure as possible.<br>
+</p>
+<h2>Chapter 13: AJAX</h2>
+<p>
+
     <script src="app.js"></script>
 </body>
 </html>
