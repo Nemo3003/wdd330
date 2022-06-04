@@ -21,12 +21,13 @@
     </pre>
     <p>So, if a function does not refer to an object as "this" in its body, it can still be called using the "call()" method, but you need to provide "null" as its first argument. This is interesting, I did not know about the call function. I like it!</p>
     <pre>square.call(null, 4)</pre>
-   
+   <p>
+An IIFE (Immediately Invoked Function Expression) is a JavaScript function that runs as soon as it is defined.</p> 
    <p> Note that in es6 assuming you are utilizing modules IIFE is less useful(not useless) on the grounds that the extension is now restricted to the module.<br>
 This doesn't imply that you may not at any point need to sepearte some code from the rest. One more helpful component of the IIFE is putting<br>
-impermanent factors in the covering utilizing a variable called temp so it just exists while the IFFE is being invoked<br>
+impermanent factors in the covering utilizing a variable called temp so it just exists while the IFFE is being invoked<br><br>
 
-One more extraordinary utilization of IIFE is to front burden something like instatement. Like a welcome message that isn't required later.<br>
+One extraordinary utilization of IIFE is to front burden something like instatement. Like a welcome message that isn't required later.<br><br>
 
 Recursive capacities summon themselves until a condition has been met like if n==1 accomplish something different continue onward until n==1<br>
 
@@ -36,23 +37,23 @@ Functions can be utilized to simplify callback hell (convulted coding from such 
 when the commitment has been settled we can utilize the then() strategy to continue. You could likewise utilize the .get() method<br>
 You can assemble .then, at that point, and .catch strategies together<br>
 
-promise.then('').catch('')<br>
+promise.then('').catch('')<br><br>
 
 You can likewise chain promises where just a single function will start when the past has been settled.<br>
 
-functions can accept other functions as arguments, they can also return a function<br>
+functions can accept other functions as arguments, they can also return a function<br><br>
 
 Closures are where an 'inward' work is returned by the 'external' work giving it admittance to any factors paying little mind to extent of the functions<br>
 Terminations have forever been that "Unusual" part of Javascript to me<br>
-Using closures allows access to variables but also allows changing variables.<br>
+Using closures allows access to variables but also allows changing variables.<br><br>
 
-Generators can be utilized to define fucntions... * is set after the function declaration. function* name(). generators are utilized to keep up with the
-condition of a value.<br> You would then utilize a next method to return a value everytime it gets called<br>
+Generators can be utilized to define functions... * is set after the function declaration. function* name(). generators are utilized to keep up with the
+condition of a value.<br> You would then utilize a next method to return a value everytime it gets called.<br><br>
 
 Yield watchword is not quite the same as return in light of the fact that the condition of the worth returned is recollected whenever yield is called. Circles are stopped after<br>
-each yield articulation, until the following strategy is called again<br>
+each yield articulation, until the following strategy is called again<br><br>
 
-A critical part of functional programming is its utilization of unadulterated capacities. A pure<br>
+A critical part of functional programming is its utilization of unadulterated capacities. A pure<br><br>
 function is a function that complies with the accompanying rules:<br>
  The returned value of an unadulterated function ought to just rely upon the values provided<br>
 as arguments. It doesn't depend on values from elsewhere in the program.<br>
@@ -60,13 +61,13 @@ as arguments. It doesn't depend on values from elsewhere in the program.<br>
 somewhere else in the program. It just makes non-damaging information transformations<br>
 also, returns new values, as opposed to changing any of the basic data.<br>
  Referential transparency. Given similar arguments, a pure function will<br>
-continuously return the equivalent result.<br>
+continuously return the equivalent result.<br><br>
 
 Generally, practical programming or pure functions is direct and unsurprising, simpler to test, decreased in bugs. Be that as it may, it is inflexible and simple to<br>
 defy the guidelines. In any case, you can utilize pure functions blended in with different paradigms. This permits you to perform tasks without significantly altering the condition of any information
 <br>
 
-Currying is when not all arguments are given to the function so it returns another function that has the arguments...<br>
+Currying is when not all arguments are given to the function so it returns another function that has the arguments...<br><br>
 <pre>
     
 // Noncurried version
@@ -90,8 +91,43 @@ It is important to try and keep your functions as pure as possible.<br>
 </p>
 <h2>Chapter 13: AJAX</h2>
 <p>
-    AJAX is a technique that allows pages to communicate asynchronously with a server, this means that the page can be refreshed without the need of being reloaded each time.
+    AJAX is a technique that allows pages to communicate asynchronously with a server, this means that the page can be refreshed without the need of being reloaded each time. <br>
 </p>
+    <h3>Clients and servers</h3>
+    <p>
+        A client could be a browser which requests something to the server which could be said that is a <br> data storage. <br> Javascript was originally designed to run on the client-side, and that is why it was necessary <br> to use a server-side language such as PHP or Ruby <br> nowadays you can use Javascript on the server-side as well, with the introduction of Node.js <br>
+    </p>
+    <h3>Same-origin Policy</h3>
+    <p>
+        This makes browser block any outside request from a domain that is different from the page making the request <br>
+        But sometimes we need to make requests from outside, so that is what Cross-origin resource sharing (CORS) solves. <br>It allows you to avoid this same-origin policy. So this way you can access for example to an external API.<br><br>
+        The rest of the book on AJAX is just things that I already know and it feels too basic to me.
+    </p>
+    <p>
+        This is an example of an AJAX code: <br>
+        <pre>
+            function postComment() {
+                 // Creating the XMLHttpRequest object
+                var request = new XMLHttpRequest();
+    
+                 // Instantiating the request object
+                 request.open("POST", "confirmation.php");
+    
+                 // Defining event listener for readystatechange event
+                 request.onreadystatechange = function() {
+                   // Check if the request is compete and was successful
+                  if(this.readyState === 4 && this.status === 200) {
+                    // Inserting the response from server into an HTML element
+                   document.getElementById("result").innerHTML = this.responseText;
+          }
+    };
+
+        </pre>
+        <br>
+        This wonderful page helped me a lot back in the day I was learning AJAX:
+        <br>
+        <a href="https://www.tutorialrepublic.com/javascript-tutorial/javascript-ajax.php">Javascript Tutorial</a>
+    </p>
 
     <script src="app.js"></script>
 </body>
