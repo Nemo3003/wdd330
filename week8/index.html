@@ -33,7 +33,62 @@
     <p>
         The last transform function is the skew(x,y) function. <br> An example would be: transform: skew(15deg, 4deg);<br> Quite useful to modify how we see a text.<br> 
     </p>
-    
+     <h5>Changing the Origin of the Transform</h5>
+    <p>
+        It is possible to control the origin from which our transform is applied. This can be done using the transform-origin property. <br> An example could be made using: transform-origin: 10% 10%; or transform-origin
+    </p>
+    <br> 
+    <h3>Transitions</h3>
+    <p>
+        CSS transitions look smoother than making transitions with JavaScript, especially in mobile devices<br> 
+    </p>
+    <ul>
+        <li>transition</li>
+        <pre>div {
+  transition: width 2s, height 4s;
+}</pre>
+        <li>transition-delay</li>
+        <pre>
+            div {
+  transition-delay: 1s;
+}
+        </pre>
+        <li>transition-duration</li>
+        <pre>div{
+             transition-duration: 2s;
+        }
+        </pre>
+        <li>transition-property</li>
+        <pre>
+            div {
+  transition-property: width;}
+        </pre>
+        <li>transition-timing-function</li>
+        <pre>
+            #div1 {transition-timing-function: linear;}
+            #div2 {transition-timing-function: ease;}
+            #div3 {transition-timing-function: ease-in;}
+            #div4 {transition-timing-function: ease-out;}
+            #div5 {transition-timing-function: ease-in-out;}
+        </pre>
+    </ul>
+    <p>The <b>transition</b> property is a shorthand property for setting the four transition properties into a single property
+        <br><br>
+        The <b>transition-delay</b> property specifies a delay (in seconds) for the transition effect.
+        <br><br>
+        The <b>transition-duration</b> property specifies how many seconds or milliseconds a transition effect takes to complete <br><br>
+        The <b>transition-property</b> specifies the name of the CSS property the transition effect is for<br><br>
+        The <b>transition-timing-function</b> property specifies the speed curve of the transition effect.<br> 
+
+This property can have the following values:<br> 
+
+ease - specifies a transition effect with a slow start, then fast, then end slowly (this is default)<br> 
+linear - specifies a transition effect with the same speed from start to end<br> 
+ease-in - specifies a transition effect with a slow start<br> 
+ease-out - specifies a transition effect with a slow end<br> 
+ease-in-out - specifies a transition effect with a slow start and end<br> 
+cubic-bezier(n,n,n,n) - lets you define your own values in a cubic-bezier function<br> 
+    </p>
 
     <script src="app.js"></script>
 </body>
