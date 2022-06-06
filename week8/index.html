@@ -89,7 +89,7 @@ ease-out - specifies a transition effect with a slow end<br>
 ease-in-out - specifies a transition effect with a slow start and end<br> 
 cubic-bezier(n,n,n,n) - lets you define your own values in a cubic-bezier function<br> 
     </p>
-      <h3>Animations</h3>
+    <h3>Animations</h3>
     <p>
         Animations unlike transitions allow you to control each step of an animation. <br>This is preferable when working with mobile.
     </p>
@@ -122,6 +122,31 @@ cubic-bezier(n,n,n,n) - lets you define your own values in a cubic-bezier functi
         </pre>
         The rest I do not find it necessary, I have never used them and also, something we must remember is that <br> CSS animations are great but we must be careful to not abuse of them. <br> Animations and this stuff (like the marquee tag) where popular in the 90's, nowadays those animations look...not that good anymore. <br>
     </p>
+    <h2>Canvas, SVG, and Drag and Dro</h2>
+    <h3>Canvas</h3>
+    <p>
+        With the Canvas API we can draw anything! <br>
+        Canvas API can also be used for altering videos. Things like green screens and visual effects added to videos.<br>
+        It is important to note that a new event listener should be added to react to the play event firing on the video element. <br>
+        Canvas is cool and all but I feel like this is just an API made to spend some time doing something fun with Javascript. <br> To be honest, I hate to manipulate stuff with canvas. <br>
+    </p>
+    <h3>SVG</h3>
+    <p>
+        SVG stands for "Scalable Vector Graphics". They maintain quality as you make them bigger or smaller. <br>
+        <b>ViewBox</b> attribute defines the starting location, width, and height.<br><b> Circle</b> element defines the a circle, cx, cy, X and Y coords of the<br>
+center of the circle.<br>
+    </p>
+    <h4>Räphael Library</h4>
+    <p>
+        Raphaël is an open-source JavaScript library that makes drawing and animating with SVG much easier.<br>
+    </p>
+    <h3>Drag and Drop</h3>
+    <p>
+        The drag and drop API workds just like when you drag and drop files in a dropbox. <br> However, take into consideration that Android does not support this API. <br>
+        In order to use it, we add the draggable attribute to HTML elements, and set the value to true
+    </p><br>
+    <p>I must be honest on this one, I do not like this stuff, it is nice to know about it but it is not my piece of cake. <br> Maybe the SVG and the drag and drop one may be useful depending on what we are doing but the Canvas... <br> I do not know when it would be useful.</p>
+</p>
     <h2>Canvas, SVG, and Drag and Dro</h2>
     <script src="app.js"></script>
 </body>
