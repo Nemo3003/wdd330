@@ -1,3 +1,5 @@
+"use strict";
+
 const url = "https://swapi.dev/api/people/";
 const getPeople = document.getElementById('people');
 const container = document.getElementById('peopleContainer');
@@ -5,7 +7,6 @@ const nextBtn = document.getElementById('next');
 const prevBtn = document.getElementById('prev');
 let nextURL;
 let prevURL;
-
 
 getPeople.addEventListener('click', () => {
     fetch(url)
@@ -18,9 +19,7 @@ getPeople.addEventListener('click', () => {
         })
         .then(response => response.json())
         .then(data => {
-            console.log(data);
             nextURL = data.next;
-            console.log(nextURL);
 
             for (let i = 0; i <= 10; i++) {
                 const name = document.createElement("p");
@@ -35,12 +34,9 @@ nextBtn.addEventListener('click', () => {
     fetch(nextURL)
         .then(response => response.json())
         .then(data => {
-            console.log(data);
             container.innerHTML = "";
             nextURL = data.next;
-            console.log(nextURL);
             prevURL = data.previous;
-            console.log(prevURL);
             for (let i = 0; i <= 10; i++) {
                 const p = document.createElement("p");
                 p.textContent = data.results[i].name;
@@ -57,12 +53,9 @@ prevBtn.addEventListener('click', () => {
     fetch(prevURL)
         .then(response => response.json())
         .then(data => {
-            console.log(data);
             container.innerHTML = "";
             nextURL = data.next;
-            console.log(nextURL);
             prevURL = data.previous;
-            console.log(prevURL);
             for (let i = 0; i <= 10; i++) {
                 const p = document.createElement("p");
                 p.textContent = data.results[i].name;
