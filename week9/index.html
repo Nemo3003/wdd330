@@ -8,7 +8,85 @@
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body class="body">
-    
+    <h1>Week 09 - Javascript: Novice to Ninja, 2nd edition</h1>
+    <h2>The Browser Object Model - BOM</h2>
+    <p><cite>The Browser Object Model (or BOM for short) is a collection of properties and methods that contain information about the browser and computer screen</cite> <br> Properties and methods are available through the <i>window</i> object. <br><br>
+    The BOM Only Makes Sense in a Browser Environment utilizing global variables <br>
+    x = 6;<br>
+    window.x; // 6 <br>
+    window.x === x; // true <br><br>
+
+    Methods of the global object -> isNAN() and parseInt() - these are also methods of the Number 
+    object (Number.isNAN(4.2)// false)<br>
+    window.parseInt(4.2); // 4 <br>
+    window.isNaN(4.2); // false <br>
+    These can produce dialogs in the browsers: alert() , confirm() , and prompt() <br><br>
+    <h3>Window properties</h3>
+    <p><ul>
+        <li>closed - Returns a boolean true if a window is closed.</li> <br>
+ <li>console - Returns the Console Object for the window.</li><br>
+ <li>defaultStatus  - Deprecated.</li><br>
+ <li>document  -  Returns the Document object for the window.</li><br>
+ <li>frameElement  -  Returns the frame in which the window runs.</li><br>
+ <li>frames - Returns all window objects running in the window.</li><br>
+ <li>history - Returns the History object for the window.</li><br>
+ <li>innerHeight - Returns the height of the window's content area (viewport) including scrollbars</li><br>
+ <li>innerWidth - Returns the width of a window's content area (viewport) including scrollbars</li><br>
+ <li>length - Returns the number of iframe elements in the current window</li><br>
+ <li>localStorage  -  Allows to save key/value pairs in a web browser. Stores the data with no expiration date</li><br>
+ <li>location  -  Returns the Location object for the window.</li><br>
+ <li>name  -  Sets or returns the name of a window</li><br>
+ <li>navigator  - Returns the Navigator object for the window.</li><br>
+ <li>opener - Returns a reference to the window that created the window</li><br>
+ <li>outerHeight - Returns the height of the browser window, including toolbars/scrollbars</li><br>
+ <li>outerWidth - Returns the width of the browser window, including toolbars/scrollbars</li><br>
+ <li>pageXOffset - Returns the pixels the current document has been scrolled (horizontally) from the upper left corner of the window</li><br>
+ <li>pageYOffset - Returns the pixels the current document has been scrolled (vertically) from the upper left corner of the window</li><br>
+ <li>parent - Returns the parent window of the current window</li><br>
+ <li>screen - Returns the Screen object for the window</li><br>
+ <li>screenLeft - Returns the horizontal coordinate of the window relative to the screen</li><br>
+ <li>screenTop -  Returns the vertical coordinate of the window relative to the screen</li><br>
+ <li>screenX - Returns the horizontal coordinate of the window relative to the screen</li><br>
+ <li>screenY - Returns the vertical coordinate of the window relative to the screen</li><br>
+ <li>sessionStorage - Allows to save key/value pairs in a web browser. Stores the data for one session</li><br>
+ <li>scrollX - An alias of pageXOffset</li><br>
+ <li>scrollY - An alias of pageYOffset</li><br>
+ <li>self  -  Returns the current window</li><br>
+ <li>status - Deprecated. Avoid using it.</li><br>
+ <li>top - Returns the topmost browser window </li><br></ul>
+    </p> <br>
+<h3>Window Object Methods</h3>
+    <p>
+    <ul>
+        <li>alert() - Displays an alert box with a message and an OK button</li><br>
+        <li>atob() - Decodes a base-64 encoded string</li><br>
+        <li>blur() - Removes focus from the current window</li><br>
+        <li>btoa() - Encodes a string in base-64</li><br>
+        <li>clearInterval() - Clears a timer set with setInterval()</li><br>
+        <li>clearTimeout() - Clears a timer set with setTimeout()</li><br>
+        <li>close() - Closes the current window</li><br>
+        <li>confirm() -  Displays a dialog box with a message and an OK and a Cancel button</li><br>
+        <li>focus() - Sets focus to the current window</li><br>
+        <li>getComputedStyle() - Gets the current computed CSS styles applied to an element</li><br>
+        <li>getSelection() - Returns a Selection object representing the range of text selected by the user</li><br>
+        <li>matchMedia()  -  Returns a MediaQueryList object representing the specified CSS media query string</li><br>
+        <li>moveBy()  -  Moves a window relative to its current position</li><br>
+        <li>moveTo()  -  Moves a window to the specified position</li><br>
+        <li>open() - Opens a new browser window</li><br>
+        <li>print() - Prints the content of the current window</li><br>
+        <li>prompt()  -  Displays a dialog box that prompts the visitor for input</li><br>
+        <li>requestAnimationFrame() - Requests the browser to call a function to update an animation before the next repaint</li><br>
+        <li>resizeBy() - Resizes the window by the specified pixels</li><br>
+        <li>resizeTo() - Resizes the window to the specified width and height</li><br>
+        <li>scroll()  -  Deprecated. This method has been replaced by the scrollTo() method.</li><br>
+        <li>scrollBy() - Scrolls the document by the specified number of pixels</li><br>
+        <li>scrollTo() - Scrolls the document to the specified coordinates</li><br>
+        <li>setInterval()  - Calls a function or evaluates an expression at specified intervals (in milliseconds)</li><br>
+        <li>setTimeout()  -  Calls a function or evaluates an expression after a specified number of milliseconds</li><br>
+        <li>stop() - Stops the window from loading</li><br>
+    </ul>
+</p>
+</p>
     <script src="app.js"></script>
 </body>
 </html>
