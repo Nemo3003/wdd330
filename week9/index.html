@@ -86,7 +86,91 @@
         <li>stop() - Stops the window from loading</li><br>
     </ul>
 </p>
+<h3>Cookies</h3>
+<p>
+    <ul>
+        <li>document.cookie - Returns the value of the cookie with the specified name</li><br>
+        <li>document.cookie = "name=value; expires=date; path=path; domain=domain; secure" - Sets a cookie with the specified name and value</li><br>
+    </p>
+<h3>Animations</h3>
+<p>
+    <ul>
+        <li>requestAnimationFrame() - Requests the browser to call a function to update an animation before the next repaint</li><br>
+        <li>cancelAnimationFrame() - Cancels an animation frame request</li><br>
 </p>
-    <script src="app.js"></script>
+<p>This chapter was rather boring to me, I have used all of these ones but to be honest, I had a hard time reading this so I had to go to <br> W3schools to get something more concise</p>
+<h2>HTML5 APIs</h2>
+<p>
+    <h4>Data-</h4>
+    Data - attribute allows you to embedd data in a web page using custom attributes that are ignored by the browser.<br>
+    These are used by a Javascript program.<Br><br>
+
+    Must start with data-<br>
+    Only use lowercase letters, number, hyphens, dots, colons or underscores.<br><br>
+    Include an optional string value.<br><br>
+
+    <pre> data-powers = 'flight superSpeed'<br>
+    data-rating = '5'<br>
+    data-dropdown<br>
+    data-user = 'DAZ'<br>
+    data-max-length = '32'<br><br></pre>
+
+    <h4>Drop the data- in javascript</h4>
+     To access the attribute, powers is used as if it is a property of the dataset object. If a data- attribute's <br>
+    name contains hyphens, they are replaced with camel-case notation, so data-max-length would be accessed using <br>
+    dataset.maxLength<br>
+    <h4>Web storage API</h4>
+    Works similar to cookies but has fewer restrictions and more storage.<br>
+    It allows you to store information about users and application information for later usage.<br>
+
+    The data stored does not automatically expire like it does with cookies.<br><br>
+
+    <pre>localStorage.variable = 'something'</pre><br><br>
+
+    <pre>console.log(localStorage.variable)</pre> <br>
+    to remove simply use delete:<br>
+    Delete localStorage.variable and localStorage.clear() removes all local storage data<br><br>
+    <h4>Notification API</h4>
+     It lets you have a pop up on user screen. It requires user permission before you can use it.<br>
+    use requestpermission() method to get the permission required.<br>
+    <pre>if(window.Notification) {
+        Notification.requestPermission()
+        .then((permission) => {
+            if(Notification.permission === 'granted') {
+            new Notification('Hello JavaScript!');
+            }
+        });
+        } </pre>
+        It can even be used to send the user to a new page if they click on the notification:
+        <pre>notification.addEventListener('click', () => {
+            window.open('https://sitepoint.com')
+            }, false);</pre>
+</p>
+<h4>Multimedia</h4>
+<p>Before HTML5 it was difficult to display videos or audio in the browser, but after HTML5 we can use the <cite>video</cite> and <br> <cite>audio</cite> tag that allows us to display video or audio.</p>
+<p>
+    <ul>
+        <li>The play event, which fires when the clip starts and when it resumes after a pause.</li>
+
+        <li>The pause event, which fires when the clip is paused.</li>
+
+        <li>The volumechange event, which fires when the volume is changed.</li>
+
+        <li>The loadedmetadata event, which we saw in the note above, and which fires when all the video's metadata has loaded.</li>
+</ul>
+</p>
+<pre>video.addEventListener('pause', () => {
+    console.log('The video has been paused'); }, false)</pre>
+    There are lots of other APIs available for HTML5, but I have not covered them all.
+    <h4>HTML5 Canvas</h4>
+<p>
+    <ul>
+        <li>The canvas element is used to draw graphics on the page.</li>
+        <li>The canvas element is a container for graphics, which is a two-dimensional representation of an image.</li>
+    </ul>
+</p>
+
+
+<script src="app.js"></script>
 </body>
 </html>
