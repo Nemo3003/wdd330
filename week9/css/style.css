@@ -57,6 +57,24 @@ p{
 .list-week{
     border: 2px solid #333;
 }
+table{
+    border: 1x solid black;
+}
+table,td,th{
+    border: 1px solid black;
+}
+#first{
+    background-color: #FEFAE0;
+}
+#second{
+    background-color: #283618;
+}
+#third{
+    background-color: #BC6C25;
+}
+.fontis{
+    font-family: 'Roboto','Roboto Slab', serif, sans-serif;
+}
 footer{
     padding: 2rem;
 }
