@@ -67,7 +67,20 @@
     <h3>Validating forms using Javascript</h3>
     <p>
         Why would you use Javascript? Well, Javascript allows you to customize the validations.
+    <br> This is a way you can use Javascript: 
+    <pre>const email = document.getElementById("mail");
+
+        email.addEventListener("input", function (event) {
+        if (email.validity.typeMismatch) {
+            email.setCustomValidity("I am expecting an e-mail address!");
+            email.reportValidity();
+        } else {
+            email.setCustomValidity("");
+        }
+        });</pre>
+
     </p>
+    <p>I personally prefer to use HTML5 validations, it takes less time to put it to work and <br> you do not need to customize it all as you have to do with Javascript. <br> You can use any of them, just take into consideration that Javascript allows you to customize the error messages and other stuff.</p>
     <script src="app.js"></script>
 </body>
 </html>
