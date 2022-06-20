@@ -81,6 +81,73 @@
 
     </p>
     <p>I personally prefer to use HTML5 validations, it takes less time to put it to work and <br> you do not need to customize it all as you have to do with Javascript. <br> You can use any of them, just take into consideration that Javascript allows you to customize the error messages and other stuff.</p>
+    <h2>Using the Fetch API</h2>
+    <p>Fetch API gives Javascript the ability to manipulate HTTP like requests and responses.<br>
+The fetch() method fetch() won't send cross-origin cookies unless you set the credentials in its options.<br>
+Since April 2018. The spec changed the default credentials policy to "same-origin"<br>
+<pre>fetch('some url example')<br>
+.then()<br>
+.then()<br>
+</pre>
+Fetch can accespt an init object as a second parameter as a specific header, body, mode or credentials. You could
+even exclude something using omit.<br>
+An example shown in the page is:
+<pre>
+    // Example POST method implementation:
+async function postData(url = '', data = {}) {
+  // Default options are marked with *
+  const response = await fetch(url, {
+    method: 'POST', // *GET, POST, PUT, DELETE, etc.
+    mode: 'cors', // no-cors, *cors, same-origin
+    cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+    credentials: 'same-origin', // include, *same-origin, omit
+    headers: {
+      'Content-Type': 'application/json'
+      // 'Content-Type': 'application/x-www-form-urlencoded',
+    },
+    redirect: 'follow', // manual, *follow, error
+    referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+    body: JSON.stringify(data) // body data type must match "Content-Type" header
+  });
+  return response.json(); // parses JSON response into native JavaScript objects
+}
+
+postData('https://example.com/answer', { answer: 42 })
+  .then(data => {
+    console.log(data); // JSON data parsed by `data.json()` call
+  });
+</pre>
+<br> I remember that last semester we used Fetch() when working with the WeatherAPI and later<br> we used fetch again when using a local JSON.<br> Now that Internet Explorer has finally being "shut down" we can say that there is no longer any browser that does not support Fetch().<br>
+Example of the code used last semester in WDD230:
+<pre>
+    
+const requestURL = 'https://nemo3003.github.io/wdd230/temple/data/temples.json';
+const cards = document.getElementById('temple');
+
+fetch(requestURL)
+  .then(function (response) {
+    return response.json();
+  })
+  .then(function (jsonObject) {
+    const temple = jsonObject['temples'];
+    temple.forEach(showTemples);
+  });
+</pre><br>
+<pre>
+    const apiURL = "https://api.openweathermap.org/data/2.5/weather?id=3429721&appid=7d25f81a71306eb3ef3609d311f3b054&units=metric";
+fetch(apiURL)
+  .then((response) => response.json())
+  .then((jsObject) => {
+    const iconsrc= `https://openweathermap.org/img/w/${jsObject.weather[0].icon}.png`;
+    const desc = jsObject.weather[0].description;
+    document.getElementById('current-temp').textContent = jsObject.main.temp.toFixed(0);
+    document.querySelector('#icon-src').textContent = iconsrc;
+    document.querySelector('#weathericon').setAttribute('src', iconsrc);
+    document.querySelector('#weathericon').setAttribute('alt', desc);
+    document.querySelector('figcaption').textContent = desc;
+  });
+</pre>
+</p>
     <script src="app.js"></script>
 </body>
 </html>
