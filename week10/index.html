@@ -27,7 +27,47 @@
         <li>Built-in form validation, done through HTML5</li>
         <li>Javascript, done through Javascript</li>
     </ul>
+    <h3>Using built-in form validation</h3>
+    <p>
+        Some of the ways we can use built-in form validations with HTML5 are:
+    </p>
+    <ul>
+        <li>required</li>
+        <li>minlength, maxlength</li>
+        <li>min, max</li>
+        <li>type</li>
+        <li>pattern</li>
+    </ul>
+    Even CSS3 has a way to show something if the data is valid or invalid <pre>:valid, :invalid, :out-of-range</pre><br> <pre>
+        input:invalid {
+            border: 2px dashed red;
+        }
+
+        input:valid {
+            border: 2px solid black;
+        }
+    </pre>
+    <p>---------------------------------------------------------------------------------</p>
+    <pre>
+        input:invalid {
+            border: 2px dashed red;
+        }
+
+        input:invalid:required {
+            background-image: linear-gradient(to right, pink, lightgreen);
+        }
+
+        input:valid {
+            border: 2px solid black;
+        }
+         input id="choose" name="i_like" required pattern="[Bb]anana|
+         input type="text" id="choose" name="i_like" required minlength="6" maxlength="6"
+         input type="number" id="number" name="amount" value="1" min="1" max="10"
+    </pre>
+    <h3>Validating forms using Javascript</h3>
+    <p>
+        Why would you use Javascript? Well, Javascript allows you to customize the validations.
+    </p>
     <script src="app.js"></script>
 </body>
 </html>
-
