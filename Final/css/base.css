@@ -1,3 +1,37 @@
-:root{
-	
+/*-----------------------------------Navigation-------------------------------------*/
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+a {
+      color: #34495e;
+      text-decoration: none;}
+
+.main-nav a {
+	padding: 10px 15px;
+	text-transform: uppercase;
+	text-align: center;
+	display: block; 
 }
+
+.main-nav {
+	margin-top: 5px;
+
+}
+.main-nav a {
+	color: #34495e;
+	font-size: .99em;
+}
+
+.main-nav a:hover {
+	color: #718daa;
+}
+@media only screen 
+  and (min-width: 7.5rem) 
+  and (max-width: 31rem)
+ {
+
+ }
