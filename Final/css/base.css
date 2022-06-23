@@ -1,3 +1,10 @@
+/*--------------------H1,H2,H3-----------------------*/
+h1,h2,h3{
+  text-align: center;
+}
+body{
+  background-color: #FEFAE0;
+}
 /*-----------------------------------Navigation-------------------------------------*/
 
 ul {
@@ -18,7 +25,10 @@ a {
 }
 
 .main-nav {
+  display: flex;
+  align-content: flex-end;
 	margin-top: 5px;
+
 
 }
 .main-nav a {
@@ -28,6 +38,26 @@ a {
 
 .main-nav a:hover {
 	color: #718daa;
+}
+/*------------------------------------About Us-----------------------------------------*/
+#main-div-about{
+  display: flex;
+  justify-content: space-around;
+  color:rgb(236, 233, 233);
+  font-size: x-large;
+}
+.aboutus1, .aboutus2{
+  max-width: 20rem;
+  border: 1px solid rgb(199, 196, 196);
+  margin: 4rem;
+  padding: 1rem;
+  border-radius: 2rem;
+  text-align: center;
+  background-color: rgb(146, 134, 118);
+}
+#main-about{
+  background-image: url(../img/aboutus-2.jpg);
+  background-repeat: no-repeat;
 }
 @media only screen 
   and (min-width: 7.5rem) 
