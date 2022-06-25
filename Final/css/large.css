@@ -67,8 +67,8 @@
   background-color: rgb(146, 134, 118);
 }
 #main-about{
-  background-image: url(../img/aboutus-2.jpg);
-  background-repeat: no-repeat;
+  background: url(../img/aboutus-2.jpg)no-repeat center center fixed;
+  background-size: cover;
 }
 
 @media (min-width: 1025px) {
