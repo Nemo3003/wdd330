@@ -1,25 +1,4 @@
-.footer-main {
-    display: grid;
-     grid-template-columns: 1fr 1fr 1fr;
-     max-height:fit-content;
-     background-color: rgb(99, 87, 73);
-     padding: 2rem;
- }
- .footer-main h2 {
-   color: rgb(177, 155, 83);
- }
- 
- .menu-icon {
-     margin-left: 2rem;
-     cursor: pointer;
- }
- ::placeholder{
-   color: rgb(177, 155, 83);
-   font-size: larger;
- }
- .footer-left {
-   color: rgb(212, 169, 27); 
- }
+
 @media (min-width: 769px) {
 .header,
 .main-nav {
@@ -43,6 +22,25 @@
     .content-review div h3,h4,p{
         padding: 1rem;
     }
+    #cardWrapper{
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(10, 1fr);
+      grid-column-gap: 0px;
+      grid-row-gap: 0px;
+      margin: 0 20rem;
+
+
+}
+#cardWrapper div{
+  max-width: 17.5rem;
+  border:  3px solid #333;
+  margin: 1rem;
+  border-radius: 2rem;  
+}
+#cardWrapper div img{
+      max-width: 17.5rem;
+  }
 }
 
 @media (min-width: 1025px) {
