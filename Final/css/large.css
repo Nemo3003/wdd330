@@ -1,5 +1,12 @@
 
 @media (min-width: 769px) {
+    .main-cont{
+        display: flex;
+        
+    }
+    .container-ricky_50{
+        margin: 0 auto;
+    }
 .header,
 .main-nav {
 		display: flex;
@@ -14,6 +21,7 @@
     .content-review{
         display: grid;
         grid-template-columns: 1fr 1fr;
+        text-align: center;
     }
     .content-review div{
         border: 3px solid #ccc;
