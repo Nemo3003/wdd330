@@ -39,6 +39,7 @@ a {
 .main-nav a:hover {
 	color: #718daa;
 }
+
 /*------------------------------------About Us-----------------------------------------*/
 #main-div-about{
   display: flex;
@@ -59,9 +60,60 @@ a {
   background-image: url(../img/aboutus-2.jpg);
   background-repeat: no-repeat;
 }
+/*----------------------------------------FOOTER-------------------------------------------------*/
+.footer-main {
+    display: grid;
+     grid-template-columns: 1fr 1fr 1fr;
+     max-height:fit-content;
+     background-color: rgb(99, 87, 73);
+     padding: 2rem;
+ }
+ .footer-main h2 {
+   color: rgb(177, 155, 83);
+ }
+ 
+ .menu-icon {
+     margin-left: 2rem;
+     cursor: pointer;
+ }
+ ::placeholder{
+   color: rgb(177, 155, 83);
+   font-size: larger;
+ }
+ .footer-left {
+   color: rgb(212, 169, 27); 
+ }
+/*---------------------------------------Character----------------------------------------------*/
+
 @media only screen 
   and (min-width: 7.5rem) 
   and (max-width: 31rem)
- {
+ {  
+  .main-nav{
+    max-width: 12rem;
+  }
+  #cardWrapper{
+    display: flex;
+    flex-direction: column;
+  }
+  #cardWrapper div img{
+      max-width: 12rem;
+  }
+  .footer-main{
+      display: grid;
+      grid-template-columns: 1fr; 
+      grid-template-rows: 1fr 1fr 1fr;
+
+}
+.footer-left{
+  grid-area: 1 / 1 / 2 / 2;
+}
+.footer-center{
+  grid-area: 3 / 1 / 4 / 2;
+  
+}
+.footer-right{
+     grid-area: 2 / 1 / 3 / 2;
+}
 
  }
