@@ -9,6 +9,7 @@ const Cards = (newData) =>{
         const cardWrapper = document.querySelector("#cardWrapper")
         let numberCounter = 0;
         newData.forEach(character =>{
+            let ids = character.id;
             cardWrapper.innerHTML = cardWrapper.innerHTML + 
             `<div class="card-char">
             <h2>${character.name}<h2>
@@ -17,15 +18,18 @@ const Cards = (newData) =>{
             <h4>Origin: ${character.origin.name}</h4>
             <img src=${character.image} class="char-img">
             <button class="like" type="button" onclick="Like()">Like</button>
-            <span> Likes: ${numberCounter}</span>
+            <span id="likes">${numberCounter}</span>
             </div>
             <br>
             `;
-            function Like(){
-                 numberCounter++;
-            }
-        }
-        
+            
+            },
         )
-    }
 
+    }
+           
+        let likeButton = document.querySelector('.like'); 
+        let likesBtn = document.querySelector('#likes');
+        function Like(){
+                console.log('Like clicked')
+ };
