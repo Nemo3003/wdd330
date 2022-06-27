@@ -1,5 +1,13 @@
 
 @media (min-width: 769px) {
+  /*-----------------------------------NAV--------------------------------------*/
+  #navigation .main-nav{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+  
+    position:absolute; right:0;
+  }
     .main-cont{
         display: flex;
         

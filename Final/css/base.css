@@ -1,3 +1,9 @@
+/* Global */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica;
+}
 /*--------------------H1,H2,H3-----------------------*/
 h1,h2,h3{
   text-align: center;
@@ -7,38 +13,50 @@ body{
 }
 /*-----------------------------------Navigation-------------------------------------*/
 
-ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
-
-a {
-      color: #34495e;
-      text-decoration: none;}
-
-.main-nav a {
-	padding: 10px 15px;
-	text-transform: uppercase;
-	text-align: center;
-	display: block; 
+header li {
+  list-style: none;
+  display: inline-block;
+  padding: 0 20px;
 }
-
-.main-nav {
+/* Header */
+header {
   display: flex;
-  align-content: flex-end;
-	margin-top: 5px;
-
-
-}
-.main-nav a {
-	color: #34495e;
-	font-size: .99em;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+  box-shadow: 0 1px 8px #ddd;
+  background-color: #283618;
 }
 
-.main-nav a:hover {
-	color: #718daa;
+#nav-title {
+  margin-right: auto;
+  font-size: 1.5em;
 }
+
+header li {
+  list-style: none;
+  display: inline-block;
+  padding: 0 20px;
+}
+
+header a {
+  color: rgba(207, 191, 191, 0);
+  background: 
+  linear-gradient(90deg,#1095c1 50%,rgb(179, 165, 165) 0) 
+  var(--_p,100%)/200% no-repeat;
+  -webkit-background-clip: text;
+  background-clip: text;
+  transition: .2s;
+  font-size: x-large;
+  font-weight: bold;
+
+}
+
+header a:hover {
+  --_p: 0%;
+}
+
+
 /*----------------------Footer----------------------*/
 form { padding-right: 12px; overflow: visible; }
 input { display: block; }
@@ -68,6 +86,52 @@ input { display: block; }
    color: rgb(212, 169, 27); 
  }
 /*---------------------------------------Character----------------------------------------------*/
+.bg {
+  animation:slide 7s ease-in-out infinite alternate;
+  background-image: linear-gradient(-60deg, #6c3 50%, #09f 50%);
+  bottom:0;
+  left:-50%;
+  opacity:.5;
+  position:fixed;
+  right:-50%;
+  top:0;
+  z-index:-1;
+}
+
+.bg2 {
+  animation-direction:alternate-reverse;
+  animation-duration:4s;
+}
+
+.bg3 {
+  animation-duration:5s;
+}
+
+.cardWrapper {
+  background-color:rgba(255,255,255,.8);
+  border-radius:.25em;
+  box-shadow:0 0 .25em rgba(0,0,0,.25);
+  box-sizing:border-box;
+  left:50%;
+  padding:10vmin;
+  position:fixed;
+  text-align:center;
+  top:50%;
+  transform:translate(-50%, -50%);
+}
+
+h1 {
+  font-family:monospace;
+}
+
+@keyframes slide {
+  0% {
+    transform:translateX(-25%);
+  }
+  100% {
+    transform:translateX(25%);
+  }
+}
 
 @media only screen 
   and (min-width: 7.5rem) 
