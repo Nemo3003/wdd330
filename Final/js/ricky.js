@@ -17,6 +17,7 @@ const Cards = (newData) =>{
             <h4>Species: ${character.species}</h4>
             <h4>Origin: ${character.origin.name}</h4>
             <img src=${character.image} class="char-img">
+            <br>
             <button class="like" type="button" onclick="Like()">Like</button>
             <span id="likes">${numberCounter}</span>
             </div>
