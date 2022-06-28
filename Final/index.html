@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Final Project - WDD330</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;600&family=Roboto:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/large.css">
 </head>
@@ -59,10 +62,11 @@
         <div class="footer-right">
             <h2>Contact Us!</h2>
             <form id="contact" name="contact" class="form-footer" action="thankyou.html" method="get">
-
+                <label for="text">Your Name</label>
                 <input type="text" class="field" placeholder="Name"  pattern="[A-Za-z].{5,}" required/><br>
+                <label for="email">Email</label>
                 <input type="email" class="field" placeholder="E-mail" required/>
-              
+                <label for="message">Message</label>
                 <textarea id="message" class="field" placeholder="Message" required></textarea>
                 
                 <input id="submit" type="submit" value="Send">
