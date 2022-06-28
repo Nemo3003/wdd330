@@ -18,7 +18,7 @@ const Cards = (newData) =>{
             <h4>Origin: ${character.origin.name}</h4>
             <img src=${character.image} class="char-img">
             <br>
-            <button class="like" type="button" onclick="Like()">Like</button>
+            <button class="like" type="button">Like</button>
             <span id="likes">${numberCounter}</span>
             </div>
             <br>
@@ -26,11 +26,21 @@ const Cards = (newData) =>{
             
             },
         )
-
-    }
-           
-        let likeButton = document.querySelector('.like'); 
-        let likesBtn = document.querySelector('#likes');
-        function Like(){
-                console.log('Like clicked')
- };
+       
+        //Now using localstorage to store the number of likes each character has
+        const likeButtons = document.querySelectorAll(".like");
+        likeButtons.forEach(button =>{
+            button.addEventListener("click", () =>{
+                let likes = button.nextElementSibling;
+                let number = parseInt(likes.innerHTML);
+                number++;
+                likes.innerHTML = number;
+                localStorage.setItem(button.parentElement.id, number);
+            });
+            //display the current number of likes each character has
+            let currentLikes = localStorage.getItem(button.parentElement.id);
+            if(currentLikes){
+                button.nextElementSibling.innerHTML = currentLikes;
+            }
+        }
+        );}
