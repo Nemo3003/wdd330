@@ -20,8 +20,8 @@ const Cards = (newData) =>{
             let spanLike = document.createElement("span");//spanLike
             //Assigned values to the elements
             name.innerHTML = character.name;
-            par.innerHTML = character.species;
-            par2.innerHTML = character.origin.name;
+            par.innerHTML = `Species: ${character.species}`;
+            par2.innerHTML = `Origin: ${character.origin.name}`;
             img.src = character.image;
             spanLike.innerHTML = "Like";
             buttonLike.appendChild(spanLike);
