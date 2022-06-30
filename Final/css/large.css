@@ -196,10 +196,7 @@
       text-align: center;
       background-color: rgb(146, 134, 118);
     }
-    #main-about{
-      background: url(../img/aboutus-2.jpg)no-repeat center center fixed;
-      background-size: cover;
-    }
+  
     /*----------------------------------------FOOTER-------------------------------------------------*/
     .footer-main {
       display: grid;
