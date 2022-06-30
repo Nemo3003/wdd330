@@ -18,7 +18,7 @@ localStorage.setItem('lastVisits', Date.now());
 
 if (numOfVisits1 != 0) {
 
-    numOfVisits.textContent = 'It\'s been ' + numOfDays + ' day(s) since your last visit.'
+    numOfVisits.textContent = 'You\'ve been here ' + numOfDays + ' day(s) ago'
 } else {
     numOfVisits.textContent = 'This is your first page visit.'
 }

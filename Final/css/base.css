@@ -16,6 +16,15 @@ body{
   background: url(../img/aboutus-2.jpg)no-repeat center center fixed;
   background-size: cover;
 }
+.aboutus1, .aboutus2{
+  max-width: 20rem;
+  border: 1px solid rgb(199, 196, 196);
+  margin: 4rem;
+  padding: 1rem;
+  border-radius: 2rem;
+  text-align: center;
+  background-color: rgb(146, 134, 118);
+}
 /*-----------------------------------Navigation-------------------------------------*/
 
 header li {
