@@ -8,6 +8,9 @@
 h1,h2,h3{
   text-align: center;
 }
+.logo-container img{
+  border-radius: 90%;
+}
 body{
   background-color: #FEFAE0;
 }
