@@ -16,7 +16,8 @@ const Cards = (newData) =>{
             let img = document.createElement("img");//image
             let buttonLike = document.createElement("button");//button
             let spanLike = document.createElement("span");//spanLike
-            //using localstorage
+
+            //using localstorage for the like spanLike
             let num_likes = Number(window.localStorage.getItem(character.id + "likes"));
 
             //Assigned values to the elements
@@ -34,7 +35,10 @@ const Cards = (newData) =>{
             par2.classList.add("origin");
             par3.classList.add("status");
             img.classList.add("image");
-            buttonLike.classList.add(`buttonLike${character.id}`);
+
+            buttonLike.setAttribute('id', `buttonLike${character.id}`);
+            buttonLike.setAttribute('class', 'likeBtn');
+            spanLike.setAttribute('class', 'span');
 
             //Appended the elements to the div
             div.appendChild(name);
