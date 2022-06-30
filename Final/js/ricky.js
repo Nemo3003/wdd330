@@ -7,9 +7,7 @@ fetch(apiURL)
 
 const Cards = (newData) =>{
         const cardWrapper = document.querySelector("#cardWrapper")
-        let numberCounter = 0;
         newData.forEach(character =>{
-            let ids = character.id;
             let div = document.createElement("div");
             let name = document.createElement("h2");//name
             let par = document.createElement("h4");//species
@@ -18,13 +16,17 @@ const Cards = (newData) =>{
             let img = document.createElement("img");//image
             let buttonLike = document.createElement("button");//button
             let spanLike = document.createElement("span");//spanLike
+            //using localstorage
+            let num_likes = Number(window.localStorage.getItem(character.id + "likes"));
+
             //Assigned values to the elements
             name.innerHTML = character.name;
             par.innerHTML = `Species: ${character.species}`;
             par2.innerHTML = `Origin: ${character.origin.name}`;
             img.src = character.image;
-            spanLike.innerHTML = "Like";
-            buttonLike.appendChild(spanLike);
+            buttonLike.innerHTML = "Like";
+            spanLike.innerHTML = ' ' + num_likes + ' '+'likes';
+
             //Assigned classes to the elements
             div.classList.add("card-char");
             name.classList.add("name");
@@ -32,30 +34,26 @@ const Cards = (newData) =>{
             par2.classList.add("origin");
             par3.classList.add("status");
             img.classList.add("image");
-            buttonLike.classList.add("buttonLike");
+            buttonLike.classList.add(`buttonLike${character.id}`);
+
             //Appended the elements to the div
             div.appendChild(name);
             div.appendChild(par);
             div.appendChild(par2);
             div.appendChild(img);
             div.appendChild(buttonLike);
-            //Appended the div to the cardWrapper
+            div.appendChild(spanLike);
 
+            //Appended the div to the cardWrapper
             cardWrapper.appendChild(div);
-            
-            /*cardWrapper.innerHTML = cardWrapper.innerHTML + 
-            `<div class="card-char">
-            <h2>${character.name}<h2>
-            <h4>Status: ${character.status}</h4>
-            <h4>Species: ${character.species}</h4>
-            <h4>Origin: ${character.origin.name}</h4>
-            <img src=${character.image} class="char-img">
-            <br>
-            <button class="like${character.id}" type="button">Like</button>
-            <span id="likes${character.id}">${numberCounter}</span>
-            </div>
-            <br>
-            `;*/
+
+            //Function to call when the Like button is clicked
+            const Like =()=> {
+                num_likes++;
+                window.localStorage.setItem(character.id + "likes", num_likes);
+                spanLike.innerHTML = ' ' + num_likes + ' '+'likes';
+            }
+            buttonLike.addEventListener("click", Like);
             
             },
         )
