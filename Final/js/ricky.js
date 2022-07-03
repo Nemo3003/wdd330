@@ -25,6 +25,7 @@ const Cards = (newData) =>{
             par.innerHTML = `Species: ${character.species}`;
             par2.innerHTML = `Origin: ${character.origin.name}`;
             img.src = character.image;
+            img.alt ="image"+character.id;
             buttonLike.innerHTML = "Like";
             spanLike.innerHTML = ' ' + num_likes + ' '+'likes';
 
