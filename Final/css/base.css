@@ -194,7 +194,7 @@ input { display: block; }
       display: grid;
       grid-template-columns: 1fr; 
       grid-template-rows: 1fr 1fr 1fr;
-      background-color: rgb(99, 87, 73);
+      background-color: #BC6C25;
       padding-top: 2rem;
       font-size: larger;
       

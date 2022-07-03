@@ -194,19 +194,19 @@
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
       max-height:fit-content;
-      background-color: rgb(99, 87, 73);
+      background-color: #BC6C25;
       padding: 2rem;
     }
     .footer-main h2 {
-    color: rgb(177, 155, 83);
+    color: rgb(104, 91, 48);
     }
 
     ::placeholder{
-    color: rgb(177, 155, 83);
+    color: rgb(104, 91, 48);
     font-size: larger;
     }
     .footer-left {
-    color: rgb(212, 169, 27); 
+    color: rgb(29, 24, 9); 
     margin-top: 2rem;
     }
     .footer-right form{
