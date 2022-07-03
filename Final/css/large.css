@@ -220,6 +220,17 @@
     .footer-center div{
       margin-left: 4rem;
     }
+    #submit{
+      max-width: 9rem;
+      font-size: large;
+    }
+    input{
+      max-width: 15rem;
+    }
+    textarea{
+      max-width: 15rem;
+      
+    }
     
 }
 @media (min-width: 1025px) {
