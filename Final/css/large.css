@@ -26,6 +26,9 @@
         margin: 0 auto;
         max-width: 1150px;
       }
+      #hamburger{
+        display: none;
+      }
   /*--------------------------------------MAIN CONTENT - REVIEWS -----------------------------------------*/
     .content-review{
         display: grid;

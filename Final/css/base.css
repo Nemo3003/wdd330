@@ -136,6 +136,11 @@ input { display: block; }
   .main-nav{
     max-width: 12rem;
   }
+  #hamburger{
+    display: inline-block;
+    max-width: 100%;
+
+  }
   /*--------------------------------HOME PAGE------------------------------*/
   .container-ricky_50 img{
     display: flex;
